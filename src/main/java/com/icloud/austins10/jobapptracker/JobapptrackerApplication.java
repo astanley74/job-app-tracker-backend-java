@@ -9,5 +9,4 @@ public class JobapptrackerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JobapptrackerApplication.class, args);
 	}
-
 }
