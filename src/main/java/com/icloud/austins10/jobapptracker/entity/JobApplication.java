@@ -1,6 +1,7 @@
 package com.icloud.austins10.jobapptracker.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -36,5 +37,6 @@ public class JobApplication {
 
     @ManyToOne
     @JoinColumn(name="user_id")
+    @JsonBackReference
     private User user;
 }

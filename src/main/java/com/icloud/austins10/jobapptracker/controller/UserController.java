@@ -20,7 +20,7 @@ public class UserController {
     }
 
     @GetMapping(value="/users/{id}")
-    public User getUser(@PathVariable("id") int id) {
+    public User getUser(@PathVariable int id) {
         return userRepository.getUserById(id);
     }
 
@@ -33,7 +33,7 @@ public class UserController {
     }
 
     @PutMapping(value="/users/{id}")
-    public User updateUser(@PathVariable("id") int id, @RequestBody User userRequest) {
+    public User updateUser(@PathVariable int id, @RequestBody User userRequest) {
         return userRepository.findById(id).map(user -> {
             user.setEmailAddress(userRequest.getEmailAddress());
             user.setPassword(userRequest.getPassword());
